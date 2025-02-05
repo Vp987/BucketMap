@@ -67,6 +67,16 @@ ul li {
     transition: background-color 0.3s;
 }
 
+ul li button:first-of-type {
+    color: #4CAF50; 
+}
+
+
+ul li button:last-of-type {
+    color: #555; 
+}
+
+
 ul li button {
     background-color: transparent;
     border: none;
