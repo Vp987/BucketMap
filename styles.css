@@ -1,0 +1,193 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure footer stays at the bottom */
+}
+
+#main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-grow: 1; /* Makes sure the content grows to fill available space */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--header-bg-color, #2d2d2d); /* Dark gray by default */
+}
+
+header h1 {
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--button-bg-color, #4CAF50); /* Green by default */
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Bucket List */
+section {
+    padding: 20px;
+    background-color: var(--section-bg-color, #f4f4f4); /* Light gray by default */
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+ul li button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+ul li.completed span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+ul li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Login & Theme Switch Section */
+#login-theme-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#login-theme-container .login-button {
+    padding: 10px 20px;
+    background-color: var(--button-bg-color, #4CAF50);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#login-theme-container .login-button:hover {
+    background-color: #45a049;
+}
+
+#theme-switch {
+    display: flex;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+span {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--footer-bg-color, #2d2d2d);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Theme Colors */
+:root {
+    --blue-theme-bg-color: #2a3d66;
+    --green-theme-bg-color: #2d2d2d;
+    --button-bg-color: #4CAF50;
+    --footer-bg-color: #2d2d2d;
+}
+
+.blue-theme {
+    --header-bg-color: #2a3d66;
+    --button-bg-color: #4CAF99;
+    --footer-bg-color: #2a3d66;
+    background-color: #e6f7ff;
+}
+
+.green-theme {
+    --header-bg-color: #2d2d2d;
+    --button-bg-color: #3ea542;
+    --footer-bg-color: #2d2d2d;
+    background-color: #f4f4f4;
+}
